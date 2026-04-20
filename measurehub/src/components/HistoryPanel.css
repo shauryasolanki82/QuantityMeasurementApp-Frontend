@@ -1,0 +1,133 @@
+.history-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px;
+}
+
+.history-controls {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+}
+
+.filter-group select {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4B5563;
+  cursor: pointer;
+}
+
+.refresh-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: auto;
+  transition: all 0.3s;
+}
+
+.refresh-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+  box-shadow: 0 4px 12px rgba(47, 111, 107, 0.3);
+}
+
+.history-table-container {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  overflow: auto;
+  border: 1px solid #E5E7EB;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th, .history-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #F3F4F6;
+  font-size: 14px;
+}
+
+.history-table th {
+  background: #F9FAFB;
+  font-weight: 600;
+  color: #6B7280;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.history-table tr:last-child td {
+  border-bottom: none;
+}
+
+.history-table tr:hover {
+  background: rgba(249, 250, 251, 0.5);
+}
+
+.result-cell {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.badge-op {
+  background: #E0F2FE;
+  color: #0284C7;
+}
+
+.badge-error {
+  background: #FEE2E2;
+  color: #DC2626;
+  cursor: help;
+}
+
+.badge-success {
+  background: #D1FAE5;
+  color: #059669;
+}
+
+.empty-state, .error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6B7280;
+  gap: 12px;
+}
+
+.error-state {
+  color: var(--danger-color);
+}
