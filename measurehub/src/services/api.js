@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: '/api/v1/quantities',
+  baseURL: `${import.meta.env.VITE_API_BASE_URL}/api/v1/quantities`,
 });
 
 const authApi = axios.create({
-  baseURL: '/auth',
+  baseURL: `${import.meta.env.VITE_API_BASE_URL}/auth`,
 });
 
 // Intercept requests and add Bearer token if it exists
